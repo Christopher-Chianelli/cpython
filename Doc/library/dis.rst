@@ -24,6 +24,11 @@ interpreter.
       Use 2 bytes for each instruction. Previously the number of bytes varied
       by instruction.
 
+   .. versionchanged:: 3.10
+      The argument for instructions that have a jump now use the instruction
+      offset instead of the byte offset. Because each instruction take two
+      bytes, the instruction offset is exactly half of the byte offset.
+
 
 Example: Given the function :func:`myfunc`::
 
